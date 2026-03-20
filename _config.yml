@@ -18,7 +18,7 @@ round-avatar: true # Cắt ảnh thành hình tròn
 
 # --- Mạng xã hội (Thay link của bạn vào đây) --- #
 social-network-links:
-  email: "long.tran@ftu.edu.vn"
+  email: "hailong.tran@ftu.edu.vn"
   facebook: "tran.hailong.ftu" # Thay bằng ID Facebook của bạn
   github: "your-github-username" 
   linkedin: "your-linkedin-username"
