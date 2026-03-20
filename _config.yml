@@ -1,73 +1,72 @@
-###########################################################
-# CONFIGURATION FOR TRẦN HẢI LONG - PORTFOLIO
-###########################################################
-
-# --- Required options --- #
+# --- Thông tin cá nhân Trần Hải Long --- #
 title: "Trần Hải Long"
 author: "Trần Hải Long"
-navbar-title: "Hải Long | FTU"
+navbar-title: "Hải Long | FTU" # Tên hiển thị trên thanh điều hướng
+timezone: "Asia/Ho_Chi_Minh"
 
-# --- Navigation Bar --- #
+# --- Các liên kết trên thanh Menu --- #
 navbar-links:
   Giới thiệu: "aboutme"
+  Kinh nghiệm: "experience"
   Cuộc thi TAXPERT: "https://www.facebook.com/Taxpert.CFAA"
   Cuộc thi TAC 2025: "https://www.facebook.com/TAC.CFAA"
-  Kỹ năng & Dự án: "projects"
 
-# --- Logo / Avatar --- #
-# Lưu ý: Hãy tải ảnh của bạn lên thư mục assets/img/ và đổi tên file dưới đây
+# --- Hình ảnh đại diện --- #
+# Lưu ý: Bạn nên tải ảnh chân dung lên thư mục assets/img/ và đổi tên tại đây
 avatar: "/assets/img/avatar-icon.png"
-round-avatar: true
+round-avatar: true # Cắt ảnh thành hình tròn
 
-# --- Footer social media links --- #
+# --- Mạng xã hội (Thay link của bạn vào đây) --- #
 social-network-links:
-  email: "long.tran@ftu.edu.vn" # Thay bằng email cá nhân của bạn
-  facebook: "your.facebook.username" # Thay bằng ID facebook của bạn
-  github: "your-github-username"     # Thay bằng tên GitHub của bạn
-  linkedin: "your-linkedin-username" # Thay bằng tên LinkedIn của bạn
-  # rss: true
+  email: "long.tran@ftu.edu.vn"
+  facebook: "tran.hailong.ftu" # Thay bằng ID Facebook của bạn
+  github: "your-github-username" 
+  linkedin: "your-linkedin-username"
 
-rss-description: "Sinh viên K63 FTU | Chuyên ngành Kế toán - Kiểm toán ACCA | IELTS 7.5 | BTC TAXPERT & TAC 2025"
+# --- Mô tả ngắn gọn (Xuất hiện khi chia sẻ link) --- #
+rss-description: "Sinh viên K63 FTU | Kế toán - Kiểm toán ACCA | IELTS 7.5 | BTC TAXPERT & TAC 2025"
 
-# --- General options --- #
-share-links-active:
-  twitter: false
-  facebook: true
-  linkedin: true
-  reddit: false
-
-# Link hiển thị dưới chân trang (có thể để trống hoặc điền link web của bạn)
-url-pretty: "longtran-ftu.github.io"
-
-title-on-all-pages: true
-excerpt_length: 50
-feed_show_excerpt: true
-feed_show_tags: true
-post_search: true
-edit_page_button: true
-
-# --- Colours / Background (Tối ưu theo tông đỏ FTU) --- #
+# --- Cấu hình màu sắc (Tông màu đỏ FTU & xám chuyên nghiệp) --- #
 page-col: "#FFFFFF"
 text-col: "#222222"
-link-col: "#E31837"    # Đỏ đặc trưng Ngoại thương
-hover-col: "#B0122A"   # Đỏ đậm khi di chuột
-navbar-col: "#F8F9FA"
+link-col: "#E31837"     # Màu đỏ đặc trưng của Ngoại thương
+hover-col: "#B0122A"    # Màu đỏ đậm khi di chuột qua
+navbar-col: "#F8F9FA"   # Thanh menu màu xám nhạt chuyên nghiệp
 navbar-text-col: "#333333"
 footer-col: "#F8F9FA"
 
-# --- Web Analytics (Nếu có) --- #
-# gtag: "G-XXXXXXXXXX"
-
-# --- Misc --- #
-date_format: "%d/%m/%Y"
-timezone: "Asia/Ho_Chi_Minh" # Chỉnh về múi giờ Việt Nam
-
-#################################################################################
-# --- PHẦN HỆ THỐNG (GIỮ NGUYÊN) --- #
-#################################################################################
+# --- Cấu hình hệ thống (Giữ nguyên để web chạy đúng) --- #
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
-
 kramdown:
+  input: GFM
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      social-share: true
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - docs/
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
